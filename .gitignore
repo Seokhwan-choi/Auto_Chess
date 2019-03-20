@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+
+AutoChess/.vs/
+AutoChess/Debug/
+AutoChess/Release/
+AutoChess/AutoChess/Debug/
+AutoChess/AutoChess/Release/
+AutoChess/AutoChess/x64/
+TeamProject/TeamProject/imgui.ini

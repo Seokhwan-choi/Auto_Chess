@@ -17,7 +17,7 @@ private:
 private:
 	ID2D1Factory* mD2DFactory;
 	ID2D1HwndRenderTarget* mD2DRenderTarget;
-
+	
 	IDWriteFactory* mDWFactory; 
 	
 	ID2D1SolidColorBrush* mDefaultBrushList[((UINT)DefaultBrush::End)];

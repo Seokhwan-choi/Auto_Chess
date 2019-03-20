@@ -35,7 +35,7 @@ void D2DRenderer::BeginRender()
 	{
 		mD2DRenderTarget->BeginDraw();
 		mD2DRenderTarget->Clear();
-		mD2DRenderTarget->SetTransform(D2D1::IdentityMatrix());
+		//mD2DRenderTarget->SetTransform(D2D1::IdentityMatrix());
 	}
 }
 /*****************************************************

@@ -1,120 +1,6 @@
 #include "stdafx.h"
 #include "Figure.h"
 
-/**************************************************************************************************
-## FloatRect::FloatRect ##
-**************************************************************************************************/
-Figure::FloatRect::FloatRect()
-	:left(0.f), top(0.f), right(0.f), bottom(0.f) {}
-
-Figure::FloatRect::FloatRect(const float & left, const float & top, const float & right, const float & bottom)
-	: left(left), top(0.f), right(0.f), bottom(0.f) {}
-
-Figure::FloatRect::FloatRect(const int & left, const int & top, const int & right, const int & bottom)
-	: left((float)left), top((float)top), right((float)right), bottom((float)bottom) {}
-
-Figure::FloatRect::FloatRect(const Vector2 & pos, const Vector2 & size, const Pivot::Enum & pivot)
-{
-	*this = FloatRect::FloatRectByPivot(pos, size, pivot);
-}
-
-Figure::FloatRect::FloatRect(const RECT & rc)
-	:left((float)rc.left), top((float)rc.top), right((float)rc.right), bottom((float)rc.bottom) {}
-
-/**************************************************************************************************
-## FloatRect::GetRect ##
-@@ return RECT : LONG형 RECT로 변환 후 반환
-**************************************************************************************************/
-const RECT Figure::FloatRect::GetRect()
-{
-	return { (LONG)left,(LONG)top,(LONG)right,(LONG)bottom };
-}
-/**************************************************************************************************
-## FloatRect::Update ##
-@@ Vector2 pos : 좌표 
-@@ Vector2 size : 사이즈 
-@@ Pivot::Enum pivot : 피봇 
-
-FLOATRECT 정보 갱신
-**************************************************************************************************/
-void Figure::FloatRect::Update(const Vector2 & pos, const Vector2 & size, const Pivot::Enum & pivot)
-{
-	*this = FloatRect::FloatRectByPivot(pos, size, pivot);
-}
-/**************************************************************************************************
-## FloatRect::Move ##
-@@ Vector2 moveValue : 이동방향 * 이동량 
-**************************************************************************************************/
-void Figure::FloatRect::Move(const Vector2 & moveValue)
-{
-	left += moveValue.x;
-	right += moveValue.x;
-	top += moveValue.y;
-	bottom += moveValue.y;
-}
-
-/**************************************************************************************************
-## Static FloatRect::FloatRectByPivot ##
-@@ Vector2 pos : 좌표 
-@@ Vector2 size : 크기 
-@@ Pivot::Enum pivot : 피봇 
-
-@@ return FloatRect : 피봇 기준으로 생성된 렉트 
-**************************************************************************************************/
-inline Figure::FloatRect Figure::FloatRect::FloatRectByPivot(const Vector2 & pos, const Vector2 & size, const Pivot::Enum & pivot)
-{
-	FloatRect result;
-	switch (pivot)
-	{
-	case Pivot::LeftTop:
-		result.left = pos.x;
-		result.top = pos.y;
-		result.right = pos.x + size.x;
-		result.bottom = pos.y + size.y;
-		return result;
-	case Pivot::Center:
-		result.left = pos.x - size.x / 2.f;
-		result.top = pos.y - size.y / 2.f;
-		result.right = pos.x + size.x / 2.f;
-		result.bottom = pos.y + size.y / 2.f;
-		return result;
-	case Pivot::Bottom:
-		result.left = pos.x - size.x / 2.f;
-		result.top = pos.y - size.y;
-		result.right = pos.x + size.x / 2.f;
-		result.bottom = pos.y;
-		return result;
-	}
-	return result;
-}
-
-
-/**************************************************************************************************
-## FloatEllipse ##
-**************************************************************************************************/
-
-Figure::FloatEllipse::FloatEllipse()
-	:origin(), radius(0.f) {}
-
-Figure::FloatEllipse::FloatEllipse(const float & x, const float & y, const float & radius)
-	: origin(x, y), radius(radius) {}
-
-Figure::FloatEllipse::FloatEllipse(const Vector2 & origin, const float & radius)
-	: origin(origin), radius(radius) {}
-/**************************************************************************************************
-## TagLine ##
-**************************************************************************************************/
-Figure::TagLine::TagLine(const Vector2& start, const Vector2& end)
-	: start(start), end(end) {}
-//중심 점과 각도 기준으로 line생성
-Figure::TagLine::TagLine(const Vector2& start,const float& angle,const float& dist)
-	:start(start)
-{
-	end.x = cosf(angle) * dist;
-	end.y = -sinf(angle) * dist;
-}
-
-
 /****************************************************************************************************
 ## IntersectAABBAABB ##
 @@ FloatRect* rc1 : 렉트 1
@@ -143,6 +29,24 @@ inline bool Figure::Vector2InRect(const FloatRect * const rc, const Vector2 * co
 	if (rc->top > pt->y)return false;
 	if (rc->bottom < pt->y)return false;
 	return false;
+}
+/****************************************************************************************************
+## Vector2InEllipse ##
+@@ Vector2* pVector : 좌표 
+@@ FloatEllipse* pEllipse : 원 
+*****************************************************************************************************/
+bool Figure::Vector2InEllipse(const Vector2 * const pVector, const FloatEllipse * const pEllipse)
+{
+	float deltaX = pVector->x - pEllipse->origin.x;
+	float deltaY = pVector->y - pEllipse->origin.y;
+
+	float distSquare = deltaX * deltaX + deltaY * deltaY;
+
+	float radiusSquare = pEllipse->radius * pEllipse->radius;
+
+	if (radiusSquare < distSquare) return false;
+
+	return true; 
 }
 
 /****************************************************************************************************
@@ -176,7 +80,7 @@ inline bool Figure::IntersectEllipseToEllipse(const FloatEllipse * const ellipse
 
 @@ return bool : 충돌 결과 값 
 *****************************************************************************************************/
-bool Figure::IntersectLineToLine(Vector2 *const pCollision,const TagLine& lineA,const TagLine& lineB)
+bool Figure::IntersectLineToLine(Vector2 *const pCollision,const Line& lineA,const Line& lineB)
 {
 	float uA = ((lineB.end.x - lineB.start.x)*(lineA.start.y - lineB.start.y) - (lineB.end.y - lineB.start.y)*(lineA.start.x - lineB.start.x)) / ((lineB.end.y - lineB.start.y)*(lineA.end.x - lineA.start.x) - (lineB.end.x - lineB.start.x)*(lineA.end.y - lineA.start.y));
 	float uB = ((lineA.end.x - lineA.start.x)*(lineA.start.y - lineB.start.y) - (lineA.end.y - lineA.start.y)*(lineA.start.x - lineB.start.x)) / ((lineB.end.y - lineB.start.y)*(lineA.end.x - lineA.start.x) - (lineB.end.x - lineB.start.x)*(lineA.end.y - lineA.start.y));
@@ -201,7 +105,7 @@ bool Figure::IntersectLineToLine(Vector2 *const pCollision,const TagLine& lineA,
 
 @@ return bool : 충동 결과 값 
 *****************************************************************************************************/
-bool Figure::IntersectLineToRect(Vector2 *const pCollision,const TagLine& line,const FloatRect& rc)
+bool Figure::IntersectLineToRect(Vector2 *const pCollision,const Line& line,const FloatRect& rc)
 {
 	Vector2 leftTop((rc.left), (rc.top));
 	Vector2 leftBottom((rc.left), (rc.bottom));
@@ -210,13 +114,51 @@ bool Figure::IntersectLineToRect(Vector2 *const pCollision,const TagLine& line,c
 	//#   1	  #
 	//4		  2
 	//#   3   #
-	if (IntersectLineToLine(pCollision, line, TagLine(leftTop, rightTop)))
+	if (IntersectLineToLine(pCollision, line, Line(leftTop, rightTop)))
 		return true;
-	if (IntersectLineToLine(pCollision, line, TagLine(rightTop, rightBottom)))
+	if (IntersectLineToLine(pCollision, line, Line(rightTop, rightBottom)))
 		return true;
-	if (IntersectLineToLine(pCollision, line, TagLine(leftBottom, rightBottom)))
+	if (IntersectLineToLine(pCollision, line, Line(leftBottom, rightBottom)))
 		return true;
-	if (IntersectLineToLine(pCollision, line, TagLine(leftTop, leftBottom)));
+	if (IntersectLineToLine(pCollision, line, Line(leftTop, leftBottom)));
+
+	return false;
+}
+/****************************************************************************************************
+## IntersectRectToEllipse ##
+@@ FloatRect* pRect : 충돌 검사 할 렉트 
+@@ FloatEllipse* pEllipse : 충돌 검사 할 원
+
+@@ return bool : 충돌 여부
+*****************************************************************************************************/
+bool Figure::IntersectRectToEllipse(const FloatRect *const pRect, const FloatEllipse * const pEllipse)
+{
+	//사각형 범위 안에 원의 중심이 있다면
+	if ((pRect->left <= pEllipse->origin.x && pEllipse->origin.x <= pRect->right) ||
+		(pRect->top <= pEllipse->origin.y && pEllipse->origin.y <= pRect->bottom))
+	{
+		//사각형을 내접하는 원에 대한 사각형 영역 생성
+		FloatRect exRect;
+		exRect.left = pRect->left - pEllipse->radius;
+		exRect.right = pRect->right + pEllipse->radius;
+		exRect.top = pRect->top - pEllipse->radius;
+		exRect.bottom = pRect->bottom + pEllipse->radius;
+		//그 사각형 영역안에 원의 중심이 있다면 충돌했다는 뜻 
+		if ((exRect.left <= pEllipse->origin.x && pEllipse->origin.x <= exRect.right) &&
+			(exRect.top <= pEllipse->origin.y && pEllipse->origin.y <= exRect.bottom))
+		{
+			return true;
+		}
+	}
+	//사각형 범위 밖에 원의 중심이 있다면
+	else
+	{
+		//4꼭지점에 대한 원과의 충돌을 실시한다.
+		if (Vector2InEllipse(&Vector2(pRect->left, pRect->top), pEllipse))return true;
+		if (Vector2InEllipse(&Vector2(pRect->right, pRect->top), pEllipse))return true;
+		if (Vector2InEllipse(&Vector2(pRect->left, pRect->bottom), pEllipse))return true;
+		if (Vector2InEllipse(&Vector2(pRect->right, pRect->bottom), pEllipse))return true;
+	}
 
 	return false;
 }

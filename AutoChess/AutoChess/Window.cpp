@@ -163,7 +163,6 @@ WPARAM Window::Run()
 	this->DeleteSingleton();
 	//==============================================================
 
-
 	return msg.wParam;
 }
 

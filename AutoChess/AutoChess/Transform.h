@@ -29,7 +29,7 @@ public:
 	void AddChild( Transform*const pChild);
 	void AttachTo( Transform*const pParent);
 	void ReleaseParent();
-	void DestroyHiararchy();
+	void DestroyHierarchy();
 
 	void SetWorldPosition(const Vector2& position);
 	void SetLocalPosition(const Vector2& position);

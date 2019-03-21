@@ -15,7 +15,7 @@ Transform::Transform(const Vector2 & pos, const Vector2 & size, const Pivot::Enu
 
 Transform::~Transform()
 {
-	this->DestroyHiararchy();
+	this->DestroyHierarchy();
 }
 /*************************************************************************************
 ## AddChild ##
@@ -105,7 +105,7 @@ void Transform::ReleaseParent()
 ## DestroyHiararchy ##
 자신을 모든 계층구조로부터 해제
 **************************************************************************************/
-void Transform::DestroyHiararchy()
+void Transform::DestroyHierarchy()
 {
 	//만약 부모가 있다면
 	if (mParent)

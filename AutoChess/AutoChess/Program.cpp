@@ -13,12 +13,16 @@ Program::Program()
 	mChildSibling2->AttachTo(mRoot);
 	mChild2 = new Transform(Vector2(_WinSizeX / 2 - 400, _WinSizeY / 2 - 200), Vector2(50, 50), Pivot::Center);
 	mChild2->AttachTo(mChildSibling);
+	Transform* mChild2Sibling = new Transform(Vector2(_WinSizeX / 2 - 400, _WinSizeY / 2 - 400),
+		Vector2(50, 50), Pivot::Center);
+	mChild2Sibling->AttachTo(mChildSibling);
 
 	mTransformList.push_back(mRoot);
 	mTransformList.push_back(mChild);
 	mTransformList.push_back(mChildSibling);
 	mTransformList.push_back(mChildSibling2);
 	mTransformList.push_back(mChild2);
+	mTransformList.push_back(mChild2Sibling);
 
 	mTarget = mRoot;
 }
@@ -75,6 +79,7 @@ void Program::Render()
 		_D2DRenderer->RenderText(10, 10, L"Red : 부모자식관계", 30, D2DRenderer::DefaultBrush::White);
 		_D2DRenderer->RenderText(10, 60, L"Blue : 형제관계", 30, D2DRenderer::DefaultBrush::White);
 		mRoot->RenderAll();
+		_D2DRenderer->FillRectangle(mTarget->GetRect(), D2DRenderer::DefaultBrush::White);
 	}
 	_D2DRenderer->EndRender();
 }

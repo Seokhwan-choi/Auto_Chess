@@ -20,23 +20,23 @@ Vector2::Vector2(const POINT& pt)
 ## GetIntX ##
 @@ return int : int Çü x
 *****************************************************************************************************/
-const int& Vector2::GetIntX()
+const int Vector2::GetIntX()
 {
-	return static_cast<int>(x);
+	return static_cast<int>(this->x);
 }
 /****************************************************************************************************
 ## GetIntY ##
 @@ return int : intÇü y 
 *****************************************************************************************************/
-const int& Vector2::GetIntY()
+const int Vector2::GetIntY()
 {
-	return static_cast<int>(y);
+	return static_cast<int>(this->y);
 }
 /****************************************************************************************************
 ## GetPoint ##
 @@ return POINT : POINT Çü Vector2 
 *****************************************************************************************************/
-const POINT& Vector2::GetPoint()
+const POINT Vector2::GetPoint()
 {
 	return { (LONG)x,(LONG)y };
 }

@@ -20,7 +20,7 @@ Vector2::Vector2(const POINT& pt)
 ## GetIntX ##
 @@ return int : int Çü x
 *****************************************************************************************************/
-int Vector2::GetIntX()
+const int& Vector2::GetIntX()
 {
 	return static_cast<int>(x);
 }
@@ -28,7 +28,7 @@ int Vector2::GetIntX()
 ## GetIntY ##
 @@ return int : intÇü y 
 *****************************************************************************************************/
-int Vector2::GetIntY()
+const int& Vector2::GetIntY()
 {
 	return static_cast<int>(y);
 }
@@ -36,7 +36,7 @@ int Vector2::GetIntY()
 ## GetPoint ##
 @@ return POINT : POINT Çü Vector2 
 *****************************************************************************************************/
-POINT Vector2::GetPoint()
+const POINT& Vector2::GetPoint()
 {
 	return { (LONG)x,(LONG)y };
 }

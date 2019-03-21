@@ -49,6 +49,9 @@
     <Filter Include="Util\Figure">
       <UniqueIdentifier>{ea3340b9-75a6-44d9-81eb-c264366f99d5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Util\Transform">
+      <UniqueIdentifier>{3bcf771d-48c2-4216-8f6a-a441dc377c79}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -117,6 +120,9 @@
     <ClInclude Include="Line.h">
       <Filter>Util\Figure</Filter>
     </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>Util\Transform</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -166,6 +172,9 @@
     </ClCompile>
     <ClCompile Include="Line.cpp">
       <Filter>Util\Figure</Filter>
+    </ClCompile>
+    <ClCompile Include="Transform.cpp">
+      <Filter>Util\Transform</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

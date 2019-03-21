@@ -16,7 +16,7 @@ Figure::FloatRect::FloatRect(const int & left, const int & top, const int & righ
 
 Figure::FloatRect::FloatRect(const Vector2 & pos, const Vector2 & size, const Pivot::Enum & pivot)
 {
-	*this = FloatRect::FloatRectByPivot(pos, size, pivot);
+	*this = Figure::RectMakePivot(pos, size, pivot);
 }
 
 Figure::FloatRect::FloatRect(const RECT & rc)
@@ -40,7 +40,7 @@ FLOATRECT 정보 갱신
 **************************************************************************************************/
 void Figure::FloatRect::Update(const Vector2 & pos, const Vector2 & size, const Pivot::Enum & pivot)
 {
-	*this = FloatRect::FloatRectByPivot(pos, size, pivot);
+	*this = Figure::RectMakePivot(pos, size, pivot);
 }
 /**************************************************************************************************
 ## FloatRect::Move ##
@@ -58,7 +58,7 @@ void Figure::FloatRect::Move(const Vector2 & moveValue)
 ## FloatRect::operator = ## 
 @@ RECT rc : RECT 
 ***************************************************************************************************/
-Figure::FloatRect Figure::FloatRect::operator=(const RECT& rc)
+const Figure::FloatRect& Figure::FloatRect::operator=(const RECT& rc)
 {
 	this->left = (float)rc.left;
 	this->right = (float)rc.right;
@@ -67,37 +67,3 @@ Figure::FloatRect Figure::FloatRect::operator=(const RECT& rc)
 	return *this;
 }
 
-/**************************************************************************************************
-## Static FloatRect::FloatRectByPivot ##
-@@ Vector2 pos : 좌표
-@@ Vector2 size : 크기
-@@ Pivot::Enum pivot : 피봇
-
-@@ return FloatRect : 피봇 기준으로 생성된 렉트
-**************************************************************************************************/
-inline Figure::FloatRect Figure::FloatRect::FloatRectByPivot(const Vector2 & pos, const Vector2 & size, const Pivot::Enum & pivot)
-{
-	FloatRect result;
-	switch (pivot)
-	{
-	case Pivot::LeftTop:
-		result.left = pos.x;
-		result.top = pos.y;
-		result.right = pos.x + size.x;
-		result.bottom = pos.y + size.y;
-		return result;
-	case Pivot::Center:
-		result.left = pos.x - size.x / 2.f;
-		result.top = pos.y - size.y / 2.f;
-		result.right = pos.x + size.x / 2.f;
-		result.bottom = pos.y + size.y / 2.f;
-		return result;
-	case Pivot::Bottom:
-		result.left = pos.x - size.x / 2.f;
-		result.top = pos.y - size.y;
-		result.right = pos.x + size.x / 2.f;
-		result.bottom = pos.y;
-		return result;
-	}
-	return result;
-}

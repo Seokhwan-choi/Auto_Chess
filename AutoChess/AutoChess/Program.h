@@ -6,8 +6,8 @@
 class Program
 {
 private:
-	class Image* mImage;
-	class Image* mFrameImage;
+	class Transform* mRoot; 
+	class Transform* mChild;
 public:
 	Program();
 	~Program();

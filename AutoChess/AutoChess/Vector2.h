@@ -14,9 +14,9 @@ public:
 	explicit Vector2(const int& x, const int& y);
 	explicit Vector2(const POINT& pt);
 
-	int GetIntX();
-	int GetIntY();
-	POINT GetPoint();
+	const int& GetIntX();
+	const int& GetIntY();
+	const POINT& GetPoint();
 
 	Vector2 operator+ (const Vector2& v);
 	Vector2 operator- (const Vector2& v);

@@ -23,8 +23,6 @@ namespace Figure
 		void Update(const Vector2& pos, const Vector2& size, const Pivot::Enum& pivot);
 		void Move(const Vector2& moveValue);
 
-		FloatRect operator=(const RECT& rc);
-	public:
-		static inline FloatRect FloatRectByPivot(const Vector2& pos, const Vector2& size, const Pivot::Enum& pivot);
+		const FloatRect& operator=(const RECT& rc);
 	};
 }

@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "SceneManager.h"
-
 #include "Scene.h"
+
 void SceneManager::Update()
 {
 	SwapScene(currentScene->Changescene());
@@ -41,7 +41,6 @@ SceneManager::~SceneManager()
 
 void SceneManager::AddScene(const string st, Scene * sc)
 {
-
 	scenePool.insert(make_pair(st, sc));
 }
 

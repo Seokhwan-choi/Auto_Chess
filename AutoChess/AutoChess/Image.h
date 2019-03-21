@@ -59,15 +59,15 @@ public:
 	void SetReverseX(const bool& x) { this->mIsReverseAxisX = x; }
 	void SetReverseY(const bool& y) { this->mIsReverseAxisY = y; }
 
-	int GetMaxFrameX()const{ return mMaxFrameX; }
-	int GetMaxFrameY()const{ return mMaxFrameY; }
-	string GetKey() const { return this->mLoadInfo.key; }
-	UINT GetWidth() const{ return mBitmap->GetPixelSize().width; }
-	UINT GetHeight()const{ return mBitmap->GetPixelSize().height; }
-	Vector2 GetSize()const { return this->mSize; }
-	Vector2 GetFrameSize(const int& frame = 0) const { return Vector2(mFrameInfo[frame].width, mFrameInfo[frame].height); }
-	TagLoadedImageInfo GetLoadInfo() const { return mLoadInfo; }
+	const int& GetMaxFrameX()const{ return mMaxFrameX; }
+	const int& GetMaxFrameY()const{ return mMaxFrameY; }
+	const string& GetKey() const { return this->mLoadInfo.key; }
+	const UINT& GetWidth() const{ return mBitmap->GetPixelSize().width; }
+	const UINT& GetHeight()const{ return mBitmap->GetPixelSize().height; }
+	const Vector2& GetSize()const { return this->mSize; }
+	const Vector2& GetFrameSize(const int& frame = 0) const { return Vector2(mFrameInfo[frame].width, mFrameInfo[frame].height); }
+	const TagLoadedImageInfo& GetLoadInfo() const { return mLoadInfo; }
 private:
-	Vector2 GetPivotPosition(const int& x,const int& y, Pivot::Enum pivot);
+	const Vector2& GetPivotPosition(const int& x,const int& y, Pivot::Enum pivot);
 };
 

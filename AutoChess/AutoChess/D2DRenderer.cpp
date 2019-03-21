@@ -62,7 +62,6 @@ void D2DRenderer::CreateFactory()
 #ifdef _DEBUG
 	assert(SUCCEEDED(hr));
 #endif
-
 	//DWriteFactory »ý¼º
 	hr = DWriteCreateFactory(
 		DWRITE_FACTORY_TYPE_SHARED,

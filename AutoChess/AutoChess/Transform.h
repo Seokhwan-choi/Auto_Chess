@@ -43,12 +43,13 @@ public:
 	void Move(const Vector2& moveValue);
 
 	void Render(const D2DRenderer::DefaultBrush& brush,const bool& bRelativeCamera = false);
+	void RenderAll(const bool& bRelativeCamera = false);
 
 	const Vector2& GetWorldPosition()const { return this->mWorldPosition; }
 	const Vector2& GetLocalPosition()const { return this->mLocalPosition; }
 	const Vector2& GetSize()const { return this->mSize; }
 	const Pivot::Enum& GetPivot()const { return this->mPivot; }
-	const Figure::FloatRect& GetFloatRect()const { return this->mRect; }
+	const Figure::FloatRect& GetRect()const { return this->mRect; }
 
 	Transform*const GetParent()const { return this->mParent; }
 	Transform*const GetFirstChild()const { return this->mFirstChild; }

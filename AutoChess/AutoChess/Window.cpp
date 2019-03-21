@@ -110,6 +110,8 @@ LRESULT Window::WndProc(HWND handle, UINT message, WPARAM wParam, LPARAM lParam)
 {
 	switch (message)
 	{
+	case WM_MOUSEMOVE:
+		Input::Get()->InputProc(message, wParam, lParam);
 	case WM_KEYDOWN:
 		switch (wParam)
 		{

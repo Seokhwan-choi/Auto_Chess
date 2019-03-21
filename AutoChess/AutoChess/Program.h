@@ -8,6 +8,13 @@ class Program
 private:
 	class Transform* mRoot; 
 	class Transform* mChild;
+	class Transform* mChildSibling;
+	class Transform* mChildSibling2;
+	class Transform* mChild2;
+
+	class Transform* mTarget;
+
+	vector<class Transform*> mTransformList;
 public:
 	Program();
 	~Program();

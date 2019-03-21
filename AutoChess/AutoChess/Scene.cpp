@@ -4,6 +4,7 @@
 
 Scene::~Scene()
 {
+
 }
 
 void Scene::Init()
@@ -13,6 +14,7 @@ void Scene::Init()
 
 void Scene::Update()
 {
+
 }
 
 void Scene::Render()

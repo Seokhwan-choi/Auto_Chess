@@ -4,11 +4,13 @@
 
 GameObject::GameObject()
 {
+
 }
 
 
 GameObject::~GameObject()
 {
+
 }
 
 void GameObject::SetSize(const Vector2 & size)
@@ -23,7 +25,7 @@ void GameObject::SetPosition(const Vector2 & position)
 	mRect = Figure::RectMakePivot(mPosition, mSize, mPivot);
 }
 
-void GameObject::SetPivot(const Pivot::Enum pivot)
+void GameObject::SetPivot(const Pivot::Enum& pivot)
 {
 	mPivot = pivot;
 	mRect = Figure::RectMakePivot(mPosition, mSize, mPivot);

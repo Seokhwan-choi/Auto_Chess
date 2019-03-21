@@ -38,6 +38,7 @@ void Program::Init()
 
 void Program::Release()
 {
+
 }
 
 void Program::Update()

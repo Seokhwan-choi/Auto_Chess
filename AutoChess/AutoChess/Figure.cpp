@@ -121,7 +121,8 @@ bool Figure::IntersectLineToRect(Vector2 *const pCollision,const Line& line,cons
 		return true;
 	if (IntersectLineToLine(pCollision, line, Line(leftBottom, rightBottom)))
 		return true;
-	if (IntersectLineToLine(pCollision, line, Line(leftTop, leftBottom)));
+	if (IntersectLineToLine(pCollision, line, Line(leftTop, leftBottom)))
+		return true;
 
 	return false;
 }

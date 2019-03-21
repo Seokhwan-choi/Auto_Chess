@@ -24,8 +24,7 @@ void Program::Release()
 
 void Program::Update()
 {
-	
-		mRoot->Move(Vector2(-3.f, 0.f));
+
 }
 
 void Program::Render()

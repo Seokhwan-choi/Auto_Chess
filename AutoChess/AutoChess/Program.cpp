@@ -26,12 +26,8 @@ Program::Program()
 
 Program::~Program()
 {
-	SafeDelete(mChildSibling2);
-	SafeDelete(mChild);
-	SafeDelete(mChildSibling);
-	SafeDelete(mRoot);
-	SafeDelete(mChild2);
-
+	for (UINT i = 0; i < mTransformList.size(); ++i)
+		SafeDelete(mTransformList[i]);
 	mTransformList.clear();
 }
 
@@ -75,6 +71,7 @@ void Program::Render()
 		_D2DRenderer->RenderText(10, 10, L"Red : 부모자식관계", 30, D2DRenderer::DefaultBrush::White);
 		_D2DRenderer->RenderText(10, 60, L"Blue : 형제관계", 30, D2DRenderer::DefaultBrush::White);
 		mRoot->RenderAll();
+		_D2DRenderer->FillRectangle(mTarget->GetRect(), D2DRenderer::DefaultBrush::White,false);
 	}
 	_D2DRenderer->EndRender();
 }

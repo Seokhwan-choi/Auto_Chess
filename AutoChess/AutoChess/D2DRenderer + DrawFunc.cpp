@@ -321,7 +321,7 @@ void D2DRenderer::DrawRectangle(const Figure::FloatRect & rc, const DefaultBrush
 void D2DRenderer::DrawEllipse(const Vector2 & origin, const float & radius, const DefaultBrush & defaultBrush,
 	const bool & isARelativePos, const float & strokeWidth)
 {
-	Figure::FloatRect rc = Figure::FloatRect::FloatRectByPivot(origin, Vector2(radius,radius),Pivot::Center);
+	Figure::FloatRect rc = Figure::RectMakePivot(origin, Vector2(radius,radius),Pivot::Center);
 	Vector2 pos = origin;
 	if (isARelativePos)
 	{
@@ -354,7 +354,7 @@ void D2DRenderer::DrawEllipse(const Vector2 & origin, const float & radius, cons
 void D2DRenderer::DrawEllipse(const Vector2 & origin, const float & radius, const D2D1::ColorF::Enum & color,
 	const float & alpha, const bool & isRelativePos, const float & strokeWidth)
 {
-	Figure::FloatRect rc = Figure::FloatRect::FloatRectByPivot(origin, Vector2(radius, radius), Pivot::Center);
+	Figure::FloatRect rc = Figure::RectMakePivot(origin, Vector2(radius, radius), Pivot::Center);
 	Vector2 pos = origin;
 	if (isRelativePos)
 	{
@@ -442,7 +442,7 @@ void D2DRenderer::FillRectangle(const Figure::FloatRect & rc, const DefaultBrush
 void D2DRenderer::FiilEllipse(const Vector2 & origin, const float & radius, const D2D1::ColorF::Enum & color,
 	const float & alpha, const bool & isRelative)
 {
-	Figure::FloatRect rc = Figure::FloatRect::FloatRectByPivot(origin, Vector2(radius, radius), Pivot::Center);
+	Figure::FloatRect rc = Figure::RectMakePivot(origin, Vector2(radius, radius), Pivot::Center);
 	Vector2 pos = origin;
 	if (isRelative)
 	{
@@ -476,7 +476,7 @@ void D2DRenderer::FiilEllipse(const Vector2 & origin, const float & radius, cons
 void D2DRenderer::FiilEllipse(const Vector2 & origin, const float & radius, const DefaultBrush & brush, 
 	const bool & isRelativePos)
 {
-	Figure::FloatRect rc = Figure::FloatRect::FloatRectByPivot(origin, Vector2(radius, radius), Pivot::Center);
+	Figure::FloatRect rc = Figure::RectMakePivot(origin, Vector2(radius, radius), Pivot::Center);
 	Vector2 pos = origin;
 	if (isRelativePos)
 	{

@@ -1,40 +1,7 @@
 #include "stdafx.h"
 #include "Figure.h"
 
-/**************************************************************************************************
-## Static FloatRect::FloatRectByPivot ##
-@@ Vector2 pos : 좌표
-@@ Vector2 size : 크기
-@@ Pivot::Enum pivot : 피봇
 
-@@ return FloatRect : 피봇 기준으로 생성된 렉트
-**************************************************************************************************/
-inline Figure::FloatRect Figure::RectMakePivot(const Vector2 & pos, const Vector2 & size, const Pivot::Enum & pivot)
-{
-	FloatRect result;
-	switch (pivot)
-	{
-	case Pivot::LeftTop:
-		result.left = pos.x;
-		result.top = pos.y;
-		result.right = pos.x + size.x;
-		result.bottom = pos.y + size.y;
-		return result;
-	case Pivot::Center:
-		result.left = pos.x - size.x / 2.f;
-		result.top = pos.y - size.y / 2.f;
-		result.right = pos.x + size.x / 2.f;
-		result.bottom = pos.y + size.y / 2.f;
-		return result;
-	case Pivot::Bottom:
-		result.left = pos.x - size.x / 2.f;
-		result.top = pos.y - size.y;
-		result.right = pos.x + size.x / 2.f;
-		result.bottom = pos.y;
-		return result;
-	}
-	return result;
-}
 /****************************************************************************************************
 ## IntersectAABBAABB ##
 @@ FloatRect* rc1 : 렉트 1

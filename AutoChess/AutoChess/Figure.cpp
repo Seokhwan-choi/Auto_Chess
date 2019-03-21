@@ -10,7 +10,7 @@
 
 회전값이 없는 FloatRect충돌 검사 후 결과 값 반환 
 *****************************************************************************************************/
-inline bool Figure::IntersectAABBAABB(const FloatRect* const rc1, const FloatRect* const rc2)
+inline bool Figure::IntersectRectToRect(const FloatRect* const rc1, const FloatRect* const rc2)
 {
 	if (rc1->right < rc2->left || rc1->left > rc2->right) return false;
 	if (rc1->bottom < rc2->top || rc1->top > rc2->bottom) return false;

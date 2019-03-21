@@ -55,6 +55,19 @@ void Figure::FloatRect::Move(const Vector2 & moveValue)
 }
 
 /**************************************************************************************************
+## FloatRect::operator = ## 
+@@ RECT rc : RECT 
+***************************************************************************************************/
+Figure::FloatRect Figure::FloatRect::operator=(const RECT& rc)
+{
+	this->left = (float)rc.left;
+	this->right = (float)rc.right;
+	this->top = (float)rc.top;
+	this->bottom = (float)rc.bottom;
+	return *this;
+}
+
+/**************************************************************************************************
 ## Static FloatRect::FloatRectByPivot ##
 @@ Vector2 pos : ÁÂÇ¥
 @@ Vector2 size : Å©±â

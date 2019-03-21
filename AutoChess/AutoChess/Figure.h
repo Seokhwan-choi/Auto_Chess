@@ -8,7 +8,7 @@
 *****************************************************************************/
 namespace Figure
 {
-	static inline bool IntersectAABBAABB(const FloatRect* const rc1, const FloatRect*const rc2);
+	static inline bool IntersectRectToRect(const FloatRect* const rc1, const FloatRect*const rc2);
 	static inline bool Vector2InRect(const  FloatRect* const rc, const Vector2* const pt);
 	static inline bool Vector2InEllipse(const Vector2* const pVector, const FloatEllipse* const pEllipse);
 	static inline bool IntersectEllipseToEllipse(const  FloatEllipse* const ellipse1, const FloatEllipse* const ellipse2);

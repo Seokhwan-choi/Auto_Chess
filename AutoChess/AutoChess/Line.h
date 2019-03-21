@@ -5,7 +5,7 @@
 *****************************************************************************/
 namespace Figure
 {
-	class Line final
+	typedef class FloatLine final
 	{
 	private:
 		enum { MaxRayRange = 1000 };
@@ -13,8 +13,8 @@ namespace Figure
 		Vector2 start;
 		Vector2 end;
 
-		Line() = delete;
-		explicit Line(const Vector2& start, const Vector2& end);
-		explicit Line(const Vector2& start, const float& angle, const float& dist = (float)MaxRayRange);
-	};
+		FloatLine() = delete;
+		explicit FloatLine(const Vector2& start, const Vector2& end);
+		explicit FloatLine(const Vector2& start, const float& angle, const float& dist = (float)MaxRayRange);
+	}Line;
 }

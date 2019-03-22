@@ -61,6 +61,12 @@
     <Filter Include="System\GameEngine\SceneManager">
       <UniqueIdentifier>{3cfaad51-3afb-4897-b7b6-31e77eab51d7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="System\Interface">
+      <UniqueIdentifier>{2316e138-aa5f-4f89-92ab-429fa4f1fd49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\MessageModule">
+      <UniqueIdentifier>{36f23d7f-3bf7-4d73-aacb-0c2d5e8a4105}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -156,6 +162,18 @@
     <ClInclude Include="UpdatePool.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="MessageComponent.h">
+      <Filter>System\MessageModule</Filter>
+    </ClInclude>
+    <ClInclude Include="MessageManager.h">
+      <Filter>System\MessageModule</Filter>
+    </ClInclude>
+    <ClInclude Include="DataContext.h">
+      <Filter>System\MessageModule</Filter>
+    </ClInclude>
+    <ClInclude Include="GameInterface.h">
+      <Filter>System\Interface</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -218,6 +236,7 @@
     <ClCompile Include="SceneManager.cpp">
       <Filter>System\GameEngine\SceneManager</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="TestScene.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -232,6 +251,19 @@
     </ClCompile>
     <ClCompile Include="UpdatePool.cpp">
       <Filter>소스 파일</Filter>
+=======
+    <ClCompile Include="MessageComponent.cpp">
+      <Filter>System\MessageModule</Filter>
+    </ClCompile>
+    <ClCompile Include="MessageManager.cpp">
+      <Filter>System\MessageModule</Filter>
+    </ClCompile>
+    <ClCompile Include="DataContext.cpp">
+      <Filter>System\MessageModule</Filter>
+    </ClCompile>
+    <ClCompile Include="GameInterface.cpp">
+      <Filter>System\Interface</Filter>
+>>>>>>> 95693f9bdc6ea79581f9d92642b7de8b609a2593
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

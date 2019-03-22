@@ -10,6 +10,7 @@
 #include "ImageManager.h"
 #include "ObjPool.h"
 #include "RenderPool.h"
+#include "UpdatePool.h"
 #include "SceneManager.h"
 #include "TestScene.h"
 #include "TestScene1.h"

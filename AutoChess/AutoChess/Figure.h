@@ -78,7 +78,7 @@ namespace Figure
 	@@ Vector2* pVector : 좌표
 	@@ FloatEllipse* pEllipse : 원
 	*****************************************************************************************************/
-	bool Vector2InEllipse(const Vector2 * const pVector, const FloatEllipse * const pEllipse)
+	inline bool Vector2InEllipse(const Vector2 * const pVector, const FloatEllipse * const pEllipse)
 	{
 		float deltaX = pVector->x - pEllipse->origin.x;
 		float deltaY = pVector->y - pEllipse->origin.y;
@@ -123,7 +123,7 @@ namespace Figure
 
 	@@ return bool : 충돌 결과 값
 	*****************************************************************************************************/
-	bool IntersectLineToLine(Vector2 *const pCollision, const Line& lineA, const Line& lineB)
+	inline bool IntersectLineToLine(Vector2 *const pCollision, const Line& lineA, const Line& lineB)
 	{
 		float uA = ((lineB.end.x - lineB.start.x)*(lineA.start.y - lineB.start.y) - (lineB.end.y - lineB.start.y)*(lineA.start.x - lineB.start.x)) / ((lineB.end.y - lineB.start.y)*(lineA.end.x - lineA.start.x) - (lineB.end.x - lineB.start.x)*(lineA.end.y - lineA.start.y));
 		float uB = ((lineA.end.x - lineA.start.x)*(lineA.start.y - lineB.start.y) - (lineA.end.y - lineA.start.y)*(lineA.start.x - lineB.start.x)) / ((lineB.end.y - lineB.start.y)*(lineA.end.x - lineA.start.x) - (lineB.end.x - lineB.start.x)*(lineA.end.y - lineA.start.y));
@@ -148,7 +148,7 @@ namespace Figure
 
 	@@ return bool : 충동 결과 값
 	*****************************************************************************************************/
-	bool IntersectLineToRect(Vector2 *const pCollision, const Line& line, const FloatRect& rc)
+	inline bool IntersectLineToRect(Vector2 *const pCollision, const Line& line, const FloatRect& rc)
 	{
 		Vector2 leftTop((rc.left), (rc.top));
 		Vector2 leftBottom((rc.left), (rc.bottom));
@@ -175,7 +175,7 @@ namespace Figure
 
 	@@ return bool : 충돌 여부
 	*****************************************************************************************************/
-	bool IntersectRectToEllipse(const FloatRect *const pRect, const FloatEllipse * const pEllipse)
+	inline bool IntersectRectToEllipse(const FloatRect *const pRect, const FloatEllipse * const pEllipse)
 	{
 		//사각형 범위 안에 원의 중심이 있다면
 		if ((pRect->left <= pEllipse->origin.x && pEllipse->origin.x <= pRect->right) ||

@@ -15,7 +15,8 @@ Transform::Transform(const Vector2 & pos, const Vector2 & size, const Pivot::Enu
 
 Transform::~Transform()
 {
-	this->DestroyHierarchy();
+	this->ReleaseParent();
+	this->ReleaseChild();
 }
 /*************************************************************************************
 ## AddChild ##
@@ -101,119 +102,18 @@ void Transform::ReleaseParent()
 	this->mParent = nullptr;
 	this->UpdateTransform();
 }
-/*************************************************************************************
-## DestroyHiararchy ##
-자신을 모든 계층구조로부터 해제
-**************************************************************************************/
-void Transform::DestroyHierarchy()
+/***********************************************************************************
+## ReleaseChild ##
+자식들 나로부터 해방 시킨다.
+*************************************************************************************/
+void Transform::ReleaseChild()
 {
-	//만약 부모가 있다면
-	if (mParent)
+	while (this->mFirstChild)
 	{
-		//형제가 있다면
-		if (mNextSibling)
-		{
-			//자식이 있다면
-			if (mFirstChild)
-			{
-				//부모의 첫번째 자식이 나라면
-				if (this->mParent->mFirstChild == this)
-				{
-					//부모의 첫 자식은 나의 바로 옆 형제
-					this->mParent->mFirstChild = this->mNextSibling;
-					Transform* tempChild = mFirstChild;
-					this->mFirstChild->ReleaseParent();
-					tempChild->AttachTo(mParent);
-
-					//계층 구조 파기가 끝났으니 내 월드에 대한 갱신이 필요
-					this->mLocalPosition = this->mWorldPosition;
-					this->mParent = nullptr;
-					this->UpdateTransform();
-				}
-				//부모의 첫번째 자식이 내가 아니라면
-				else
-				{
-					Transform* tempChild = mFirstChild;
-					//형제는 건드릴 필요없고 부모에 내 자식 엮는다.
-					this->mFirstChild->ReleaseParent();
-					tempChild->AttachTo(mParent);
-
-					//계층 구조 파기가 끝났으니 내 월드에 대한 갱신이 필요
-					this->mLocalPosition = this->mWorldPosition;
-					this->mParent = nullptr;
-					this->UpdateTransform();
-				}
-			}
-			//자식이 없다면
-			else
-			{
-				//부모의 첫 자식이 나라면
-				if (mParent->mFirstChild == this)
-				{
-					mParent->mFirstChild = this->mNextSibling;
-
-					//계층 구조 파기가 끝났으니 내 월드에 대한 갱신이 필요
-					this->mLocalPosition = this->mWorldPosition;
-					this->mParent = nullptr;
-					this->UpdateTransform();
-				}
-				//부모의 첫 자식이 내가 아니라면
-				else
-				{
-					Transform* tempSibling = mParent->mFirstChild;
-					//나의 제일 끝 형제를 찾아서 내 다음 형제로 연결해준다. 
-					while (tempSibling != nullptr)
-					{
-						if (tempSibling->mNextSibling == this)
-						{
-							tempSibling->mNextSibling = this->mNextSibling;
-							//난 계층 구조에서 빠졌으니 형제가 없다.
-							this->mNextSibling = nullptr;
-							break;
-						}
-						tempSibling = tempSibling->mNextSibling;
-					}
-
-					//계층 구조 파기가 끝났으니 내 월드에 대한 갱신이 필요
-					this->mLocalPosition = this->mWorldPosition;
-					this->mParent = nullptr;
-					this->UpdateTransform();
-				}
-			}
-		}
-		//형제가 없다면
-		{
-			//자식이 있다면
-			if(mFirstChild)
-			{
-				Transform* tempChild = mFirstChild;
-				this->mFirstChild->ReleaseParent();
-				tempChild->AttachTo(mParent);
-				this->ReleaseParent();
-			}
-			//자식이 없다면
-			else
-			{
-				this->ReleaseParent();
-			}
-		}
-	}
-	//만약 부모가 없다면 형제도 없음
-	else
-	{
-		//만약 자식이 있다면
-		if (mFirstChild)
-		{
-			Transform* tempChild = mFirstChild;
-			while (tempChild)
-			{
-				Transform* soulChild = tempChild->mNextSibling;
-				tempChild->ReleaseParent();
-				tempChild = soulChild;
-			}
-		}
+		mFirstChild->ReleaseParent();
 	}
 }
+
 /*************************************************************************************
 ## SetWorldPosition ##
 @@ Vector2 position : 월드 좌표 세팅
@@ -335,20 +235,20 @@ void Transform::Render(const D2DRenderer::DefaultBrush& brush,const bool& bRelat
 
 계층 구조 전부 렌더링 
 **************************************************************************************/
-void Transform::RenderAll(const bool & bRelativeCamera)
+void Transform::RenderHierarchy(const bool & bRelativeCamera)
 {
 	_D2DRenderer->DrawRectangle(mRect, D2DRenderer::DefaultBrush::White);
 	if (mNextSibling)
 	{
 		_D2DRenderer->DrawLine(mWorldPosition, mNextSibling->mWorldPosition,
 			D2DRenderer::DefaultBrush::Blue);
-		mNextSibling->RenderAll(bRelativeCamera);
+		mNextSibling->RenderHierarchy(bRelativeCamera);
 	}
 	if (mFirstChild)
 	{
 		_D2DRenderer->DrawLine(mWorldPosition, mFirstChild->mWorldPosition,
 			D2DRenderer::DefaultBrush::Red);
-		mFirstChild->RenderAll(bRelativeCamera);
+		mFirstChild->RenderHierarchy(bRelativeCamera);
 	}
 }
 /*************************************************************************************

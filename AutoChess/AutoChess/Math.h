@@ -13,26 +13,26 @@ public:
 	static const float FloatMin;			//float 최소
 	static const float FloatMax;			//float 최대
 
-	static inline float NegativeChecking(const float& value);		//음수 양수 판단
-	static inline float ToRadian(const float& degree);			//디그리 -> 라디안
-	static inline float ToDegree(const float& radian);			//라디안 -> 디그리 
-
-	static inline int Random(const int& r1, const int& r2);				//int 랜덤값 
-	static inline float Random(const float& r1, const float& r2);		//float 랜덤값
-
-	static inline float RandF();							//float 랜덤값
-
-	static inline float Lerp(const float& val1, const float& val2, const float& amount);	//선형 보간법
-	static inline float Clampf(float value, const float& min, const float& max);		//value가 min,max범위를 넘어설려하면 min,max를 반환
-	static inline int Clamp(int value, const int& min, const int& max);				//''
-
-	static inline int FloatToInt(const float& f);
-	static inline bool FloatEqual(const float& f1, const float& f2);
+	static float NegativeChecking(const float& value);		//음수 양수 판단
+	static float ToRadian(const float& degree);			//디그리 -> 라디안
+	static float ToDegree(const float& radian);			//라디안 -> 디그리 
+		   
+	static int Random(const int& r1, const int& r2);				//int 랜덤값 
+	static float Random(const float& r1, const float& r2);		//float 랜덤값
+		   
+	static float RandF();							//float 랜덤값
+		   
+	static float Lerp(const float& val1, const float& val2, const float& amount);	//선형 보간법
+	static float Clampf(float value, const float& min, const float& max);		//value가 min,max범위를 넘어설려하면 min,max를 반환
+	static int Clamp(int value, const int& min, const int& max);				//''
+		   
+	static int FloatToInt(const float& f);
+	static bool FloatEqual(const float& f1, const float& f2);
 
 	//두 점사이의 거리 반환
-	static inline float GetDistance(const float& startX, const float& startY, const float& endX, const float& endY);
+	static float GetDistance(const float& startX, const float& startY, const float& endX, const float& endY);
 	//두 점 사이의 각을 반환
-	static inline float GetAngle(const float& x1, const float& y1, const float& x2, const float& y2);
+	static float GetAngle(const float& x1, const float& y1, const float& x2, const float& y2);
 
 	/*********************************************************
 	## Min ##

@@ -12,7 +12,7 @@ const float Math::FloatMax = 3.402823E+38f;
 소수의 음수 양수를 판단해 ~1.f또는 1.f 반환
 @@ float value : 값
 **********************************************************/
-inline float Math::NegativeChecking(const float& value)
+ float Math::NegativeChecking(const float& value)
 {
 	if (value < 0.0f)
 		return -1.0f;
@@ -25,7 +25,7 @@ inline float Math::NegativeChecking(const float& value)
 디그리값을 라디안으로 변환해 반환
 @@ float degree : 디그리값
 **********************************************************/
-inline float Math::ToRadian(const float& degree)
+ float Math::ToRadian(const float& degree)
 {
 	return degree * Math::PI / 180.0f;
 }
@@ -34,7 +34,7 @@ inline float Math::ToRadian(const float& degree)
 라디안을 디그리로 변환해 반환
 @@ float radian : 라디안 값
 **********************************************************/
-inline float Math::ToDegree(const float& radian)
+ float Math::ToDegree(const float& radian)
 {
 	return radian * 180.0f / Math::PI;
 }
@@ -43,7 +43,7 @@ inline float Math::ToDegree(const float& radian)
 @@ float r1 : 시작 값
 @@ float r2 : 끝 값
 **********************************************************/
-inline int Math::Random(const int & r1, const int & r2)
+ int Math::Random(const int & r1, const int & r2)
 {
 	return (int)(rand() % (r2 - r1 + 1)) + r1;
 }
@@ -52,7 +52,7 @@ inline int Math::Random(const int & r1, const int & r2)
 @@ float r1 : 시작 값
 @@ float r2 : 끝 값
 **********************************************************/
-inline float Math::Random(const float& r1, const float& r2)
+ float Math::Random(const float& r1, const float& r2)
 {
 	float random = ((float)rand()) / (float)RAND_MAX;
 	float diff = r2 - r1;
@@ -64,7 +64,7 @@ inline float Math::Random(const float& r1, const float& r2)
 ## RandF ##
 소수형 난수 반환
 **********************************************************/
-inline float Math::RandF()
+ float Math::RandF()
 {
 	return (float)(rand()) / (float)RAND_MAX;
 }
@@ -75,7 +75,7 @@ inline float Math::RandF()
 @@ float val2 : 도달 값
 @@ float amount : 두 값의 비율, 0.0f ~ 1.0f 사이의 값이 들어간다.
 **********************************************************/
-inline float Math::Lerp(const float& val1, const float& val2, const float& amount)
+ float Math::Lerp(const float& val1, const float& val2, const float& amount)
 {
 	return val1 + (val2 - val1) * amount;
 }
@@ -86,7 +86,7 @@ inline float Math::Lerp(const float& val1, const float& val2, const float& amoun
 @@ float min : 최소 범위
 @@ float max : 최대 범위
 **********************************************************/
-inline float Math::Clampf(float value, const float& min, const float& max)
+ float Math::Clampf(float value, const float& min, const float& max)
 {
 	value = value > max ? max : value;
 	value = value < min ? min : value;
@@ -100,7 +100,7 @@ inline float Math::Clampf(float value, const float& min, const float& max)
 @@ int min : 최소 범위
 @@ int max : 최대 범위
 **********************************************************/
-inline int Math::Clamp(int value, const int& min, const int& max)
+ int Math::Clamp(int value, const int& min, const int& max)
 {
 	value = value > max ? max : value;
 	value = value < min ? min : value;
@@ -113,7 +113,7 @@ inline int Math::Clamp(int value, const int& min, const int& max)
 ## FloatToInt ##
 @@ const float& f : int로 형변환할 float
 **********************************************************/
-inline int Math::FloatToInt(const float & f)
+ int Math::FloatToInt(const float & f)
 {
 	return static_cast<int>(f + Math::Epsilon);
 }
@@ -124,7 +124,7 @@ inline int Math::FloatToInt(const float & f)
 @@ const float& f1 : float 1
 @@ const float& f2 : float 2
 **********************************************************/
-inline bool Math::FloatEqual(const float & f1, const float & f2)
+ bool Math::FloatEqual(const float & f1, const float & f2)
 {
 	return (fabs(f1 - f2) <= Math::Epsilon);
 }
@@ -137,7 +137,7 @@ inline bool Math::FloatEqual(const float & f1, const float & f2)
 @@ float endX : 목표점 x
 @@ float endY : 목표점 y
 **********************************************************************/
-inline float Math::GetDistance(const float& startX, const float& startY, const float& endX, const float& endY)
+ float Math::GetDistance(const float& startX, const float& startY, const float& endX, const float& endY)
 {
 	float x = endX - startX;
 	float y = endY - startY;
@@ -152,7 +152,7 @@ inline float Math::GetDistance(const float& startX, const float& startY, const f
 @@ float x2 : 목표점 X
 @@ float y2 : 목표점 Y
 *******************************************************************************/
-inline float Math::GetAngle(const float& x1, const float& y1, const float& x2, const float& y2)
+ float Math::GetAngle(const float& x1, const float& y1, const float& x2, const float& y2)
 {
 	//x축과 y축으로의 길이를 구한다. 
 	float x = x2 - x1;

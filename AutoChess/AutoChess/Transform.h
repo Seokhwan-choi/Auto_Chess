@@ -29,7 +29,7 @@ public:
 	void AddChild( Transform*const pChild);
 	void AttachTo( Transform*const pParent);
 	void ReleaseParent();
-	void DestroyHierarchy();
+	void ReleaseChild();
 
 	void SetWorldPosition(const Vector2& position);
 	void SetLocalPosition(const Vector2& position);
@@ -43,7 +43,7 @@ public:
 	void Move(const Vector2& moveValue);
 
 	void Render(const D2DRenderer::DefaultBrush& brush,const bool& bRelativeCamera = false);
-	void RenderAll(const bool& bRelativeCamera = false);
+	void RenderHierarchy(const bool& bRelativeCamera = false);
 
 	const Vector2& GetWorldPosition()const { return this->mWorldPosition; }
 	const Vector2& GetLocalPosition()const { return this->mLocalPosition; }

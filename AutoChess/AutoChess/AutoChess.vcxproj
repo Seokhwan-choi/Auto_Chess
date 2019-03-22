@@ -23,7 +23,7 @@
     <ProjectGuid>{1D84CDE1-13D4-402D-B4D6-4629BAE771BA}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>AutoChess</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -161,7 +161,9 @@
     <ClInclude Include="LibraryHeader.h" />
     <ClInclude Include="Math.h" />
     <ClInclude Include="ModuleHeader.h" />
+    <ClInclude Include="ObjPool.h" />
     <ClInclude Include="Program.h" />
+    <ClInclude Include="RenderPool.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />
@@ -170,7 +172,10 @@
     <ClInclude Include="Line.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Singletonbase.h" />
+    <ClInclude Include="TestScene.h" />
+    <ClInclude Include="TestScene1.h" />
     <ClInclude Include="Transform.h" />
+    <ClInclude Include="UpdatePool.h" />
     <ClInclude Include="Vector2.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>
@@ -186,7 +191,9 @@
     <ClCompile Include="ImageManager.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="Math.cpp" />
+    <ClCompile Include="ObjPool.cpp" />
     <ClCompile Include="Program.cpp" />
+    <ClCompile Include="RenderPool.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -197,7 +204,10 @@
     </ClCompile>
     <ClCompile Include="StringHelper.cpp" />
     <ClCompile Include="Line.cpp" />
+    <ClCompile Include="TestScene.cpp" />
+    <ClCompile Include="TestScene1.cpp" />
     <ClCompile Include="Transform.cpp" />
+    <ClCompile Include="UpdatePool.cpp" />
     <ClCompile Include="Vector2.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>

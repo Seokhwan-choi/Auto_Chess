@@ -8,3 +8,16 @@ namespace Pivot
 	};
 }
 
+enum class TileType : UINT
+{
+	Wall, Ground, END
+};
+
+enum class ObjectType : UINT 
+{
+	Tile, Pawn, Item, Effect, UI, END
+};
+
+
+
+

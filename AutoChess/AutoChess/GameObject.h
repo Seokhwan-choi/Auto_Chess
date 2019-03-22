@@ -7,6 +7,7 @@ protected:
 	Vector2 mPosition;
 	Figure::FloatRect mRect;
 	bool mIsActive;
+	ObjectType mType;
 	Pivot::Enum mPivot;
 
 private:
@@ -17,12 +18,14 @@ public:
 	void SetPivot(const Pivot::Enum& pivot);
 	void SetName(const string& name) { mName = name; }
 	void SetIsActive(const bool& IsActive) { mIsActive = IsActive; }
+	void SetType(const ObjectType& Type) { mType = Type; }
 
 	const Vector2& GetSize() const { return mSize; }
 	const Vector2& GetPosition() const { return mPosition; }
 	const bool& GetIsActive() const { return mIsActive; }
 	const Pivot::Enum& GetPivot() const { return mPivot; }
 	const Figure::FloatRect& GetRect() const { return mRect; }
+	const ObjectType& GetType() { return mType; }
 
 	virtual void Init() = 0;
 	virtual void Update() = 0;

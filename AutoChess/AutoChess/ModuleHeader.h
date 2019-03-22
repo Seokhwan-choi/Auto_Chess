@@ -8,3 +8,8 @@
 #include "Input.h"
 #include "D2DRenderer.h"
 #include "ImageManager.h"
+#include "ObjPool.h"
+#include "RenderPool.h"
+#include "SceneManager.h"
+#include "TestScene.h"
+#include "TestScene1.h"

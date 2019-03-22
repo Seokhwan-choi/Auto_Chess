@@ -3,6 +3,7 @@
 ## Program ##
 @@ Author : ±Ç¼ø¿ì , Date : 2019.03.20
 *****************************************************************************/
+
 class Program
 {
 private:
@@ -10,6 +11,8 @@ private:
 	class Transform* mTarget;
 
 	vector<class Transform*> mTransformList;
+
+
 public:
 	Program();
 	~Program();

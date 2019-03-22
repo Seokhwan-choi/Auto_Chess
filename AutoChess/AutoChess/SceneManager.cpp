@@ -4,7 +4,6 @@
 
 void SceneManager::Update()
 {
-	SwapScene(currentScene->Changescene());
 	currentScene->Update();
 }
 
@@ -24,19 +23,7 @@ void SceneManager::Release()
 
 void SceneManager::SwapScene(const string st)
 {
-	if (st != "")
-	{
-		SetCurrentScene(st);
-	}
-}
-
-SceneManager::SceneManager()
-{
-}
-
-
-SceneManager::~SceneManager()
-{
+	SetCurrentScene(st);
 }
 
 void SceneManager::AddScene(const string st, Scene * sc)
@@ -52,6 +39,10 @@ void SceneManager::SetCurrentScene(const string st)
 	}
 	else
 	{
+		if (currentScene != nullptr)
+		{
+			currentScene->Release();
+		}
 		currentScene = scenePool.find(st)->second;
 		currentScene->Init();
 	}

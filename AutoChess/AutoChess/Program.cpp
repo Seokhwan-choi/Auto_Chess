@@ -20,7 +20,9 @@ Program::~Program()
 
 void Program::Init()
 {
-	
+	_SceneManager->AddScene("test", new TestScene);
+	_SceneManager->AddScene("test1", new TestScene1);
+	_SceneManager->SetCurrentScene("test");
 }
 
 void Program::Release()
@@ -79,6 +81,8 @@ void Program::Update()
 		mTarget->Move(Vector2(0.f, -3.f));
 	else if (_Input->GetKey('S'))
 		mTarget->Move(Vector2(0.f, 3.f));
+
+	_SceneManager->Update();
 }
 
 void Program::Render()
@@ -93,6 +97,8 @@ void Program::Render()
 		_D2DRenderer->RenderText(10, 60, L"Blue : 형제관계", 30, D2DRenderer::DefaultBrush::White);
 		_D2DRenderer->RenderText(10, 110, L"Q : 해당노드에 자식 생성", 30, D2DRenderer::DefaultBrush::White);
 		_D2DRenderer->RenderText(10, 160, L"E : 해당 노드 삭제", 30, D2DRenderer::DefaultBrush::White);
+	
+		_SceneManager->Render();
 	}
 	_D2DRenderer->EndRender();
 }

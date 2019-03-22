@@ -178,12 +178,14 @@ void Window::CreateSingleton()
 	Input::Create();
 	D2DRenderer::Create();
 	ImageManager::Create();
+	SceneManager::Create();
 }
 /*************************************************
 ## DeleteSingleton ##
 **************************************************/
 void Window::DeleteSingleton()
 {
+	SceneManager::Delete();
 	ImageManager::Delete();
 	D2DRenderer::Delete();
 	Input::Delete();

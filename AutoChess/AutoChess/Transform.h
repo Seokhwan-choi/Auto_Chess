@@ -26,8 +26,8 @@ public:
 	Transform(const Vector2& pos, const Vector2& size, const Pivot::Enum& pivot = Pivot::LeftTop);
 	virtual ~Transform();
 
-	void AddChild( Transform*const pChild);
-	void AttachTo( Transform*const pParent);
+	void AddChild(Transform*const pChild);
+	void AttachTo(Transform*const pParent);
 	void ReleaseParent();
 	void ReleaseChild();
 

@@ -9,7 +9,6 @@ protected:
 	bool mIsActive;
 	ObjectType mType;
 	Pivot::Enum mPivot;
-
 private:
 	GameObject(const GameObject& gameobject) {}
 public:
@@ -20,6 +19,7 @@ public:
 	void SetIsActive(const bool& IsActive) { mIsActive = IsActive; }
 	void SetType(const ObjectType& Type) { mType = Type; }
 
+	const string& GetName()const { return mName; }
 	const Vector2& GetSize() const { return mSize; }
 	const Vector2& GetPosition() const { return mPosition; }
 	const bool& GetIsActive() const { return mIsActive; }

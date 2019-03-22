@@ -7,11 +7,10 @@
 
 class UpdatePool
 {
+	BlockAssign(UpdatePool)
 private:
 	vector<GameObject*>	uPool;
 	vector<GameObject*>::iterator uPooliter;
-
-
 public:
 	UpdatePool();
 	~UpdatePool();

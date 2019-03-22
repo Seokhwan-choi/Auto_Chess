@@ -1,6 +1,7 @@
 #pragma once
 class RenderPool
 {
+	BlockAssign(RenderPool)
 public:
 	enum class Layer
 	{
@@ -18,9 +19,9 @@ private:
 private:
 	friend class Scene;
 	RenderPool() {};					//생성자인데 안쓸거같아요
-	~RenderPool() {}
-
+	virtual ~RenderPool() {}
 public:
+	void Release();
 	void Render();					//풀에 들어간 오브젝트들만 랜더 돌려줍니다!
 	
 	void RequestRender(const Layer& layer, class GameObject*const pObject);

@@ -6,24 +6,22 @@
 @@ Author : 최석환,신한영,채민병,전우현 , Date : 2019.03.22
 *****************************************************************************/
 
-class ObjPool
+class ObjPool final
 {
+	BlockAssign(ObjPool)
 private:
-	vector<GameObject*> mObjectPool;
-
-
-private:
-	//map<ObjectType, vector<GameObject*>> mPool;
-	//map<ObjectType, vector<GameObject*>>::iterator mPoolIter;
-	void Release();
-
+	vector<class GameObject*> mObjectPool;
 public:
+	void AddObject(class GameObject*const gameobject);
+	void DeleteObject(class GameObject*const pObject);
 
-	void AddObject(GameObject* gameobject);
-
+	class GameObject*const FindObject(const string& name);
+	vector<class GameObject*> FindObjects(const string& name);
+	const vector<class GameObject*>*const GetObjectPool();
 	
-
 	ObjPool();
-	~ObjPool();
+	virtual ~ObjPool();
+
+	void Release();
 };
 

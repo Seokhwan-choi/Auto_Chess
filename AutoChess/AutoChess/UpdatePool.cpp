@@ -18,17 +18,12 @@ void UpdatePool::AddPool(GameObject * gp)
 
 void UpdatePool::Release()
 {
-	for (auto& upd : uPool)
-	{
-		upd->Release();
-		SafeDelete(upd);
-	}
 	uPool.clear();
 }
 
 void UpdatePool::update()
 {
-	for (int i = 0; i < uPool.size(); i++)
+	for (UINT i = 0; i < uPool.size(); i++)
 	{
 		uPool[i]->Update();
 	}

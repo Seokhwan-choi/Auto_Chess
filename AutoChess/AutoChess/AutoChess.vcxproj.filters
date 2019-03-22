@@ -235,9 +235,6 @@
     <Filter Include="System\MessageModule">
       <UniqueIdentifier>{f028cd4c-5497-4925-879c-32de0560093d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="System\GameEngine">
-      <UniqueIdentifier>{041f4f69-3dae-4131-a2d9-cdb9937cc518}</UniqueIdentifier>
-    </Filter>
     <Filter Include="System\Image">
       <UniqueIdentifier>{16ad91e0-ff27-4be9-8108-7ef4e4dcc5da}</UniqueIdentifier>
     </Filter>
@@ -255,18 +252,6 @@
     </Filter>
     <Filter Include="MainEntry\TestScene">
       <UniqueIdentifier>{95935e08-3c97-4876-ab8f-32c30706d9cf}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="System\GameEngine\GameObject">
-      <UniqueIdentifier>{c05ce4d8-6987-433e-86a9-390cb4051e55}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="System\GameEngine\Scene">
-      <UniqueIdentifier>{94d18463-7040-46e2-86c1-f24e3f22dc35}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="System\GameEngine\SceneManager">
-      <UniqueIdentifier>{e6ebc05a-072f-4dc4-a940-125798bf1451}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="System\GameEngine\MainPool">
-      <UniqueIdentifier>{33229e6e-2c3f-45bc-a1f6-a721eee42ce0}</UniqueIdentifier>
     </Filter>
     <Filter Include="PrivateFolder">
       <UniqueIdentifier>{4453491e-6f2f-453b-bae0-ac9852ff09c1}</UniqueIdentifier>
@@ -291,6 +276,21 @@
     </Filter>
     <Filter Include="System\Time">
       <UniqueIdentifier>{eb5ec10d-df40-41cf-abea-922557e76ea9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\GameEngine">
+      <UniqueIdentifier>{041f4f69-3dae-4131-a2d9-cdb9937cc518}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\GameEngine\GameObject">
+      <UniqueIdentifier>{c05ce4d8-6987-433e-86a9-390cb4051e55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\GameEngine\SceneManager">
+      <UniqueIdentifier>{e6ebc05a-072f-4dc4-a940-125798bf1451}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\GameEngine\MainPool">
+      <UniqueIdentifier>{33229e6e-2c3f-45bc-a1f6-a721eee42ce0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\GameEngine\Scene">
+      <UniqueIdentifier>{94d18463-7040-46e2-86c1-f24e3f22dc35}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

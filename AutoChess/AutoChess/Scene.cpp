@@ -14,7 +14,7 @@ void Scene::Init()
 
 void Scene::Update()
 {
-	uPdPool.update();
+	mUpdPool.update();
 }
 
 void Scene::Render()
@@ -24,5 +24,8 @@ void Scene::Render()
 
 void Scene::Release()
 {
+	mRdPool.Release();
+	mUpdPool.Release();
+	mOsPool.Release();
 
 }

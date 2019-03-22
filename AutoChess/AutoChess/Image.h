@@ -68,6 +68,6 @@ public:
 	const Vector2& GetFrameSize(const int& frame = 0) const { return Vector2(mFrameInfo[frame].width, mFrameInfo[frame].height); }
 	const TagLoadedImageInfo& GetLoadInfo() const { return mLoadInfo; }
 private:
-	const Vector2& GetPivotPosition(const int& x,const int& y, Pivot::Enum pivot);
+	const Vector2 GetPivotPosition(const int& x,const int& y, Pivot::Enum pivot);
 };
 

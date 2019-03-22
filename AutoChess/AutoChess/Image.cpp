@@ -203,7 +203,7 @@ void Image::ResetRenderOption()
 
 피봇과 크기 기반으로 좌표 반환
 *********************************************************************************/
-const Vector2& Image::GetPivotPosition(const int & x, const int & y, Pivot::Enum pivot)
+const Vector2 Image::GetPivotPosition(const int & x, const int & y, Pivot::Enum pivot)
 {
 	if (pivot == Pivot::LeftTop)
 		return Vector2(x, y);

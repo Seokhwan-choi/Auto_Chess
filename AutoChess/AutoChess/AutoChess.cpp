@@ -27,5 +27,5 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	WPARAM wParam = window->Run();
 	SafeDelete(window);
 
-	return wParam;
+	return static_cast<int>(wParam);
 }

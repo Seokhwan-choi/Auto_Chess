@@ -4,6 +4,7 @@
 #include "Vector2.h"
 #include "Figure.h"
 #include "Image.h"
+#include "InfoUI.h"
 
 #include "TimeManager.h"
 #include "Input.h"

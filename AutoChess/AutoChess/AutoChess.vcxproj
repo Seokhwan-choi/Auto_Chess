@@ -23,7 +23,6 @@
     <ProjectGuid>{1D84CDE1-13D4-402D-B4D6-4629BAE771BA}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>AutoChess</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -159,7 +158,10 @@
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Image.h" />
     <ClInclude Include="ImageManager.h" />
+    <ClInclude Include="InfoUI.h" />
     <ClInclude Include="Input.h" />
+    <ClInclude Include="Transform2D.h" />
+    <ClInclude Include="Widget.h" />
     <ClInclude Include="LibraryHeader.h" />
     <ClInclude Include="Math.h" />
     <ClInclude Include="MessageComponent.h" />
@@ -196,6 +198,7 @@
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="ImageManager.cpp" />
     <ClCompile Include="Input.cpp" />
+    <ClCompile Include="Transform2D.cpp" />
     <ClCompile Include="Math.cpp" />
     <ClCompile Include="ObjPool.cpp" />
     <ClCompile Include="MessageComponent.cpp" />
@@ -218,6 +221,7 @@
     <ClCompile Include="Transform.cpp" />
     <ClCompile Include="UpdatePool.cpp" />
     <ClCompile Include="Vector2.cpp" />
+    <ClCompile Include="Widget.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>

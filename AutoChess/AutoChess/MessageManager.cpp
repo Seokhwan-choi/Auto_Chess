@@ -46,7 +46,7 @@ MessageManager::~MessageManager()
 	DataIter iter = mSleepData.begin();
 	for (; iter != mSleepData.end(); ++iter)
 	{
-		UINT size = iter->second.size();
+		size_t size = iter->second.size();
 		for (UINT i = 0; i < size; ++i)
 		{
 			SafeDelete(iter->second.top());

@@ -88,6 +88,12 @@
     <ClCompile Include="TimeManager.cpp">
       <Filter>System\Time</Filter>
     </ClCompile>
+    <ClCompile Include="Transform2D.cpp">
+      <Filter>PrivateFolder\동현\Transform2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Widget.cpp">
+      <Filter>PrivateFolder\동현\Widget</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutoChess.h">
@@ -195,6 +201,15 @@
     <ClInclude Include="TimeManager.h">
       <Filter>System\Time</Filter>
     </ClInclude>
+    <ClInclude Include="Transform2D.h">
+      <Filter>PrivateFolder\동현\Transform2D</Filter>
+    </ClInclude>
+    <ClInclude Include="InfoUI.h">
+      <Filter>PrivateFolder\동현</Filter>
+    </ClInclude>
+    <ClInclude Include="Widget.h">
+      <Filter>PrivateFolder\동현\Widget</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="AutoChess.ico">
@@ -291,6 +306,12 @@
     </Filter>
     <Filter Include="System\GameEngine\Scene">
       <UniqueIdentifier>{94d18463-7040-46e2-86c1-f24e3f22dc35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PrivateFolder\동현\Widget">
+      <UniqueIdentifier>{df307253-83e6-4fab-a7e7-b23e5d72249a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PrivateFolder\동현\Transform2D">
+      <UniqueIdentifier>{d1e52295-8168-4810-a58f-ebbd2782279f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

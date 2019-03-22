@@ -28,7 +28,7 @@ void D2DRenderer::RenderText(const int & x, const int & y, const wstring & text,
 	HRESULT hr = this->mDWFactory->CreateTextLayout
 	(
 		text.c_str(),
-		text.length(),
+		(UINT32)text.length(),
 		this->mFontList[font],
 		(float)text.length() * size,
 		(float)size,
@@ -38,7 +38,7 @@ void D2DRenderer::RenderText(const int & x, const int & y, const wstring & text,
 
 	DWRITE_TEXT_RANGE range;
 	range.startPosition = 0;
-	range.length = text.length();
+	range.length = (UINT32)text.length();
 
 	layout->SetFontSize((float)size, range);
 	layout->SetTextAlignment(align);
@@ -77,7 +77,7 @@ void D2DRenderer::RenderText(const int & x, const int & y, const wstring & text,
 	//텍스트 레이아웃 생성
 	mDWFactory->CreateTextLayout(
 		text.c_str(),
-		text.length(),
+		(UINT32)text.length(),
 		mFontList[font],
 		(float)text.length() * size,
 		(float)size,
@@ -87,7 +87,7 @@ void D2DRenderer::RenderText(const int & x, const int & y, const wstring & text,
 	//레이아웃 셋업
 	DWRITE_TEXT_RANGE range;
 	range.startPosition = 0;
-	range.length = text.length();
+	range.length = (UINT32)text.length();
 	layout->SetFontSize((float)size, range);
 	layout->SetParagraphAlignment(DWRITE_PARAGRAPH_ALIGNMENT_CENTER);
 	layout->SetTextAlignment(align);
@@ -129,7 +129,7 @@ void D2DRenderer::RenderTextField(const int & x, const int & y, const wstring & 
 	IDWriteTextLayout* layout = nullptr;
 	mDWFactory->CreateTextLayout(
 		text.c_str(),
-		text.length(),
+		(UINT32)text.length(),
 		mFontList[font],
 		(float)width,
 		(float)height,
@@ -139,7 +139,7 @@ void D2DRenderer::RenderTextField(const int & x, const int & y, const wstring & 
 	//레이아웃 셋업
 	DWRITE_TEXT_RANGE range;
 	range.startPosition = 0;
-	range.length = text.length();
+	range.length = (UINT32)text.length();
 	layout->SetFontSize((float)size, range);
 
 	layout->SetParagraphAlignment(DWRITE_PARAGRAPH_ALIGNMENT_CENTER);
@@ -178,7 +178,7 @@ void D2DRenderer::RenderTextField(const int & x, const int & y, const wstring & 
 	IDWriteTextLayout* layout = nullptr;
 	mDWFactory->CreateTextLayout(
 		text.c_str(),
-		text.length(),
+		(UINT32)text.length(),
 		mFontList[font],
 		(float)width,
 		(float)height,
@@ -188,7 +188,7 @@ void D2DRenderer::RenderTextField(const int & x, const int & y, const wstring & 
 	//레이아웃 셋업
 	DWRITE_TEXT_RANGE range;
 	range.startPosition = 0;
-	range.length = text.length();
+	range.length = (UINT32)text.length();
 	layout->SetFontSize((float)size, range);
 
 	layout->SetParagraphAlignment(DWRITE_PARAGRAPH_ALIGNMENT_CENTER);

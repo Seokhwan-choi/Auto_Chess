@@ -5,20 +5,7 @@
 Program::Program()
 {
 	mRoot = new Transform(Vector2(_WinSizeX / 2, _WinSizeY / 2),Vector2(100,100),Pivot::Center);
-	//Transform* mChild = new Transform(Vector2(_WinSizeX / 2 - 200, _WinSizeY / 2), Vector2(50, 50), Pivot::Center);
-	//mChild->AttachTo(mRoot);
-	//Transform* mChildSibling = new Transform(Vector2(_WinSizeX / 2 - 200, _WinSizeY / 2 - 200),Vector2(50, 50), Pivot::Center);
-	//mChildSibling->AttachTo(mRoot);
-	//Transform* mChildSibling2 = new Transform(Vector2(_WinSizeX / 2 - 200, _WinSizeY / 2 - 400), Vector2(50, 50), Pivot::Center);
-	//mChildSibling2->AttachTo(mRoot);
-	//Transform* mChild2 = new Transform(Vector2(_WinSizeX / 2 - 400, _WinSizeY / 2 - 200), Vector2(50, 50), Pivot::Center);
-	//mChild2->AttachTo(mChildSibling);
-
 	mTransformList.push_back(mRoot);
-	//mTransformList.push_back(mChild);
-	//mTransformList.push_back(mChildSibling);
-	//mTransformList.push_back(mChildSibling2);
-	//mTransformList.push_back(mChild2);
 
 	mTarget = mRoot;
 }

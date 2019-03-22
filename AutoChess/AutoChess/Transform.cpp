@@ -242,13 +242,11 @@ void Transform::RenderHierarchy(const bool & bRelativeCamera)
 	{
 		_D2DRenderer->DrawLine(mWorldPosition, mNextSibling->mWorldPosition,
 			D2DRenderer::DefaultBrush::Blue);
-		mNextSibling->RenderHierarchy(bRelativeCamera);
 	}
 	if (mFirstChild)
 	{
 		_D2DRenderer->DrawLine(mWorldPosition, mFirstChild->mWorldPosition,
 			D2DRenderer::DefaultBrush::Red);
-		mFirstChild->RenderHierarchy(bRelativeCamera);
 	}
 }
 /*************************************************************************************

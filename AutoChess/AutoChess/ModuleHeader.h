@@ -5,6 +5,7 @@
 #include "Figure.h"
 #include "Image.h"
 
+#include "TimeManager.h"
 #include "Input.h"
 #include "D2DRenderer.h"
 #include "ImageManager.h"
@@ -13,4 +14,4 @@
 #include "UpdatePool.h"
 #include "SceneManager.h"
 #include "TestScene.h"
-#include "TestScene1.h"
+#include "TestScene1.h" 

@@ -1,12 +1,13 @@
 #pragma once
-#include "Singletonbase.h"
+#include "SingletonBase.h"
 
 /****************************************************************************
 ## D2DRenderer ##
 @@ Author : ±Ç¼ø¿ì , Date : 2019.03.20
 *****************************************************************************/
-class D2DRenderer final : public Singletonbase<D2DRenderer>
+class D2DRenderer final : public SingletonBase<D2DRenderer>
 {
+	BlockAssign(D2DRenderer)
 public:
 	enum class DefaultBrush : UINT
 	{

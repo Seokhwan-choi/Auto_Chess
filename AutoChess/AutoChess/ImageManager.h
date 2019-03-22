@@ -1,10 +1,10 @@
 #pragma once
-#include "Singletonbase.h"
+#include "SingletonBase.h"
 /****************************************************************************
 ## ImageRenderer ##
 @@ Author : ±Ç¼ø¿ì , Date : 2019.03.20
 *****************************************************************************/
-class ImageManager final : public Singletonbase<ImageManager>
+class ImageManager final : public SingletonBase<ImageManager>
 {
 private:
 	typedef unordered_map<string, class Image*>::iterator ImageIter; 

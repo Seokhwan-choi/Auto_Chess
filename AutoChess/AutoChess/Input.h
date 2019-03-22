@@ -1,11 +1,11 @@
 #pragma once
 #include <bitset>
-#include "Singletonbase.h"
+#include "SingletonBase.h"
 /****************************************************************************
 ## Input ##
 @@ Author : ±Ç¼ø¿ì , Date : 2019.03.20
 *****************************************************************************/
-class Input final : public Singletonbase<Input> 
+class Input final : public SingletonBase<Input> 
 {
 	enum : int {KeyMax = 256};
 private:
@@ -14,6 +14,7 @@ private:
 	std::bitset<KeyMax> mKeyCurrent;
 	Vector2 mMousePosition;
 public:
+	BlockAssign(Input)
 	Input();
 	virtual ~Input();
 

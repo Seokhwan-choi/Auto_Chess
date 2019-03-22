@@ -22,6 +22,14 @@ float으로 static_cast
 #define SafeDelete(p){ if(p){ delete (p); (p) = NULL; } }
 #define SafeDeleteArray(p){ if(p){ delete [] (p); (p) = NULL; } }
 /*********************************************************************************
+## BlockAssign  ##
+대입 생성 및 복사 생성을 막는다
+*********************************************************************************/
+#define BlockAssign(ClassName)\
+public:\
+ClassName(const ClassName& t) = delete;\
+ClassName operator=(const ClassName& t) = delete;
+/*********************************************************************************
 ## Synthesize ##
 @@ VarType : 자료형 
 @@ VarName : 변수 이름

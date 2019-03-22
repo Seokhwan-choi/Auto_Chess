@@ -6,13 +6,6 @@
 
 class Program
 {
-private:
-	class Transform* mRoot; 
-	class Transform* mTarget;
-
-	vector<class Transform*> mTransformList;
-
-
 public:
 	Program();
 	~Program();

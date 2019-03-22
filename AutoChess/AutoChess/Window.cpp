@@ -140,6 +140,7 @@ WPARAM Window::Run()
 	//=======================================================
 	this->_program = new Program;
 	this->_program->Init();
+	TimeManager::Get()->Start();
 	//============Main Loop===================================
 	while (true)
 	{
@@ -175,6 +176,7 @@ WPARAM Window::Run()
 **************************************************/
 void Window::CreateSingleton()
 {
+	TimeManager::Create();
 	Input::Create();
 	D2DRenderer::Create();
 	ImageManager::Create();
@@ -189,6 +191,7 @@ void Window::DeleteSingleton()
 	ImageManager::Delete();
 	D2DRenderer::Delete();
 	Input::Delete();
+	TimeManager::Delete();
 }
 /*************************************************
 ## UpdateSingleton ##
@@ -196,4 +199,5 @@ void Window::DeleteSingleton()
 void Window::UpdateSingleton()
 {
 	Input::Get()->Update();
+	TimeManager::Get()->Update();
 }

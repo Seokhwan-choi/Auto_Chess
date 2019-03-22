@@ -1,207 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="소스 파일">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="헤더 파일">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="리소스 파일">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="MainHeaderCpp">
-      <UniqueIdentifier>{24ddb30d-f14d-4f3e-acf0-c851caf6ba1e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="System">
-      <UniqueIdentifier>{ca1b4f9d-279b-454f-bd02-ce3bb0687b62}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Util">
-      <UniqueIdentifier>{cb3cf809-bc2e-4ff1-81b1-dab3dc4f7be7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="System\Window">
-      <UniqueIdentifier>{441c6ee5-599a-4a65-a100-006d4bd371c7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MainEntry">
-      <UniqueIdentifier>{4d87d7aa-22f5-43a6-ad12-24e616fb3a9b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Util\Math">
-      <UniqueIdentifier>{4141c036-5275-4234-ae05-52b7cadd32e3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Util\String">
-      <UniqueIdentifier>{6817cfd5-d78c-48f4-9be6-e9532b436b99}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="System\TSingleton">
-      <UniqueIdentifier>{d1de8428-fdac-4d4e-b039-a904e3f48cc6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="System\Input">
-      <UniqueIdentifier>{103ed92a-5e07-46cd-ad66-bf38f2ee4cf5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="System\D2D">
-      <UniqueIdentifier>{e5b90647-5086-47f1-981c-71c32e82922a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="System\Image">
-      <UniqueIdentifier>{f1241917-193c-424b-90e2-3a3e8e3f8c5e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Util\Figure">
-      <UniqueIdentifier>{ea3340b9-75a6-44d9-81eb-c264366f99d5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Util\Transform">
-      <UniqueIdentifier>{3bcf771d-48c2-4216-8f6a-a441dc377c79}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="System\GameEngine">
-      <UniqueIdentifier>{ea095c45-a901-4b30-a5c4-5d2eee488ad1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="System\GameEngine\GameObject">
-      <UniqueIdentifier>{c76defc0-317f-40f5-b53f-60a283900bb7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="System\GameEngine\SceneManager">
-      <UniqueIdentifier>{3cfaad51-3afb-4897-b7b6-31e77eab51d7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="System\Interface">
-      <UniqueIdentifier>{2316e138-aa5f-4f89-92ab-429fa4f1fd49}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="System\MessageModule">
-      <UniqueIdentifier>{36f23d7f-3bf7-4d73-aacb-0c2d5e8a4105}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="targetver.h">
-      <Filter>리소스 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Resource.h">
-      <Filter>리소스 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="AutoChess.h">
-      <Filter>리소스 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="stdafx.h">
-      <Filter>MainHeaderCpp</Filter>
-    </ClInclude>
-    <ClInclude Include="EnumStructHeader.h">
-      <Filter>MainHeaderCpp</Filter>
-    </ClInclude>
-    <ClInclude Include="DefineHeader.h">
-      <Filter>MainHeaderCpp</Filter>
-    </ClInclude>
-    <ClInclude Include="ModuleHeader.h">
-      <Filter>MainHeaderCpp</Filter>
-    </ClInclude>
-    <ClInclude Include="LibraryHeader.h">
-      <Filter>MainHeaderCpp</Filter>
-    </ClInclude>
-    <ClInclude Include="Window.h">
-      <Filter>System\Window</Filter>
-    </ClInclude>
-    <ClInclude Include="Program.h">
-      <Filter>MainEntry</Filter>
-    </ClInclude>
-    <ClInclude Include="Vector2.h">
-      <Filter>Util\Math</Filter>
-    </ClInclude>
-    <ClInclude Include="Math.h">
-      <Filter>Util\Math</Filter>
-    </ClInclude>
-    <ClInclude Include="StringHelper.h">
-      <Filter>Util\String</Filter>
-    </ClInclude>
-    <ClInclude Include="Singletonbase.h">
-      <Filter>System\TSingleton</Filter>
-    </ClInclude>
-    <ClInclude Include="Input.h">
-      <Filter>System\Input</Filter>
-    </ClInclude>
-    <ClInclude Include="D2DRenderer.h">
-      <Filter>System\D2D</Filter>
-    </ClInclude>
-    <ClInclude Include="Image.h">
-      <Filter>System\Image</Filter>
-    </ClInclude>
-    <ClInclude Include="ImageManager.h">
-      <Filter>System\Image</Filter>
-    </ClInclude>
-    <ClInclude Include="Figure.h">
-      <Filter>Util\Figure</Filter>
-    </ClInclude>
-    <ClInclude Include="FloatRect.h">
-      <Filter>Util\Figure</Filter>
-    </ClInclude>
-    <ClInclude Include="FloatEllipse.h">
-      <Filter>Util\Figure</Filter>
-    </ClInclude>
-    <ClInclude Include="Line.h">
-      <Filter>Util\Figure</Filter>
-    </ClInclude>
-    <ClInclude Include="Transform.h">
-      <Filter>Util\Transform</Filter>
-    </ClInclude>
-    <ClInclude Include="GameObject.h">
-      <Filter>System\GameEngine\GameObject</Filter>
-    </ClInclude>
-    <ClInclude Include="Scene.h">
-      <Filter>System\GameEngine\SceneManager</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneManager.h">
-      <Filter>System\GameEngine\SceneManager</Filter>
-    </ClInclude>
-    <ClInclude Include="TestScene.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="TestScene1.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjPool.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="RenderPool.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="UpdatePool.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="MessageComponent.h">
-      <Filter>System\MessageModule</Filter>
-    </ClInclude>
-    <ClInclude Include="MessageManager.h">
-      <Filter>System\MessageModule</Filter>
-    </ClInclude>
-    <ClInclude Include="DataContext.h">
-      <Filter>System\MessageModule</Filter>
-    </ClInclude>
-    <ClInclude Include="GameInterface.h">
-      <Filter>System\Interface</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>리소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="AutoChess.cpp">
       <Filter>MainHeaderCpp</Filter>
     </ClCompile>
-    <ClCompile Include="Window.cpp">
-      <Filter>System\Window</Filter>
-    </ClCompile>
-    <ClCompile Include="Program.cpp">
-      <Filter>MainEntry</Filter>
-    </ClCompile>
-    <ClCompile Include="Vector2.cpp">
-      <Filter>Util\Math</Filter>
-    </ClCompile>
-    <ClCompile Include="Math.cpp">
-      <Filter>Util\Math</Filter>
-    </ClCompile>
-    <ClCompile Include="StringHelper.cpp">
-      <Filter>Util\String</Filter>
-    </ClCompile>
-    <ClCompile Include="Input.cpp">
-      <Filter>System\Input</Filter>
+    <ClCompile Include="D2DRenderer + DrawFunc.cpp">
+      <Filter>System\D2D</Filter>
     </ClCompile>
     <ClCompile Include="D2DRenderer.cpp">
       <Filter>System\D2D</Filter>
+    </ClCompile>
+    <ClCompile Include="DataContext.cpp">
+      <Filter>System\MessageModule</Filter>
+    </ClCompile>
+    <ClCompile Include="Figure.cpp">
+      <Filter>Util\Figure</Filter>
+    </ClCompile>
+    <ClCompile Include="FloatEllipse.cpp">
+      <Filter>Util\Figure</Filter>
+    </ClCompile>
+    <ClCompile Include="FloatRect.cpp">
+      <Filter>Util\Figure</Filter>
     </ClCompile>
     <ClCompile Include="Image.cpp">
       <Filter>System\Image</Filter>
@@ -209,74 +28,274 @@
     <ClCompile Include="ImageManager.cpp">
       <Filter>System\Image</Filter>
     </ClCompile>
-    <ClCompile Include="D2DRenderer + DrawFunc.cpp">
-      <Filter>System\D2D</Filter>
-    </ClCompile>
-    <ClCompile Include="Figure.cpp">
-      <Filter>Util\Figure</Filter>
-    </ClCompile>
-    <ClCompile Include="FloatRect.cpp">
-      <Filter>Util\Figure</Filter>
-    </ClCompile>
-    <ClCompile Include="FloatEllipse.cpp">
-      <Filter>Util\Figure</Filter>
+    <ClCompile Include="Input.cpp">
+      <Filter>System\Input</Filter>
     </ClCompile>
     <ClCompile Include="Line.cpp">
       <Filter>Util\Figure</Filter>
     </ClCompile>
-    <ClCompile Include="Transform.cpp">
-      <Filter>Util\Transform</Filter>
+    <ClCompile Include="Math.cpp">
+      <Filter>Util\Math</Filter>
     </ClCompile>
-    <ClCompile Include="GameObject.cpp">
-      <Filter>System\GameEngine\GameObject</Filter>
-    </ClCompile>
-    <ClCompile Include="Scene.cpp">
-      <Filter>System\GameEngine\SceneManager</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneManager.cpp">
-      <Filter>System\GameEngine\SceneManager</Filter>
-    </ClCompile>
-<<<<<<< HEAD
-    <ClCompile Include="TestScene.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="TestScene1.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjPool.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="RenderPool.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="UpdatePool.cpp">
-      <Filter>소스 파일</Filter>
-=======
     <ClCompile Include="MessageComponent.cpp">
       <Filter>System\MessageModule</Filter>
     </ClCompile>
     <ClCompile Include="MessageManager.cpp">
       <Filter>System\MessageModule</Filter>
     </ClCompile>
-    <ClCompile Include="DataContext.cpp">
+    <ClCompile Include="Program.cpp">
+      <Filter>MainEntry</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="StringHelper.cpp">
+      <Filter>Util\String</Filter>
+    </ClCompile>
+    <ClCompile Include="Transform.cpp">
+      <Filter>System\Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector2.cpp">
+      <Filter>Util\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>System\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="TestScene.cpp">
+      <Filter>MainEntry\TestScene</Filter>
+    </ClCompile>
+    <ClCompile Include="TestScene1.cpp">
+      <Filter>MainEntry\TestScene</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>System\GameEngine\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>System\GameEngine\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>System\GameEngine\SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjPool.cpp">
+      <Filter>System\GameEngine\MainPool</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderPool.cpp">
+      <Filter>System\GameEngine\MainPool</Filter>
+    </ClCompile>
+    <ClCompile Include="UpdatePool.cpp">
+      <Filter>System\GameEngine\MainPool</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeManager.cpp">
+      <Filter>System\Time</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutoChess.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="D2DRenderer.h">
+      <Filter>System\D2D</Filter>
+    </ClInclude>
+    <ClInclude Include="DataContext.h">
       <Filter>System\MessageModule</Filter>
-    </ClCompile>
-    <ClCompile Include="GameInterface.cpp">
-      <Filter>System\Interface</Filter>
->>>>>>> 95693f9bdc6ea79581f9d92642b7de8b609a2593
-    </ClCompile>
+    </ClInclude>
+    <ClInclude Include="DefineHeader.h">
+      <Filter>MainHeaderCpp</Filter>
+    </ClInclude>
+    <ClInclude Include="EnumStructHeader.h">
+      <Filter>MainHeaderCpp</Filter>
+    </ClInclude>
+    <ClInclude Include="Figure.h">
+      <Filter>Util\Figure</Filter>
+    </ClInclude>
+    <ClInclude Include="FloatEllipse.h">
+      <Filter>Util\Figure</Filter>
+    </ClInclude>
+    <ClInclude Include="FloatRect.h">
+      <Filter>Util\Figure</Filter>
+    </ClInclude>
+    <ClInclude Include="Image.h">
+      <Filter>System\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageManager.h">
+      <Filter>System\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>System\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="LibraryHeader.h">
+      <Filter>MainHeaderCpp</Filter>
+    </ClInclude>
+    <ClInclude Include="Line.h">
+      <Filter>Util\Figure</Filter>
+    </ClInclude>
+    <ClInclude Include="Math.h">
+      <Filter>Util\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="MessageComponent.h">
+      <Filter>System\MessageModule</Filter>
+    </ClInclude>
+    <ClInclude Include="MessageManager.h">
+      <Filter>System\MessageModule</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleHeader.h">
+      <Filter>MainHeaderCpp</Filter>
+    </ClInclude>
+    <ClInclude Include="Program.h">
+      <Filter>MainEntry</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>MainHeaderCpp</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Singletonbase.h">
+      <Filter>System\TSingleton</Filter>
+    </ClInclude>
+    <ClInclude Include="StringHelper.h">
+      <Filter>Util\String</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>System\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2.h">
+      <Filter>Util\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>System\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="TestScene.h">
+      <Filter>MainEntry\TestScene</Filter>
+    </ClInclude>
+    <ClInclude Include="TestScene1.h">
+      <Filter>MainEntry\TestScene</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>System\GameEngine\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>System\GameEngine\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>System\GameEngine\SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjPool.h">
+      <Filter>System\GameEngine\MainPool</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderPool.h">
+      <Filter>System\GameEngine\MainPool</Filter>
+    </ClInclude>
+    <ClInclude Include="UpdatePool.h">
+      <Filter>System\GameEngine\MainPool</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeManager.h">
+      <Filter>System\Time</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="AutoChess.ico">
+      <Filter>Resource</Filter>
+    </Image>
+    <Image Include="small.ico">
+      <Filter>Resource</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="System">
+      <UniqueIdentifier>{b0dda672-78fe-4b4b-8d77-e13c619dc04e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{2a5c5024-5c49-439d-abef-e08797c53b64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MainHeaderCpp">
+      <UniqueIdentifier>{aa003397-bb02-483d-9bbf-865cda09d201}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{9291fa8e-8b37-4cab-b725-b2c15b785c8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\D2D">
+      <UniqueIdentifier>{fd05f707-4e31-41c3-ab9f-1651e481ecad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\Math">
+      <UniqueIdentifier>{0a01c5ee-3e6e-431b-8177-09f2a1625dad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\Figure">
+      <UniqueIdentifier>{bad0381d-095c-41c2-8079-c283d5c5b4ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\String">
+      <UniqueIdentifier>{809c2e77-84ec-4394-9b43-908b9d0b4108}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Transform">
+      <UniqueIdentifier>{8aa90cf6-7704-4493-bb8c-a74077d3174c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\MessageModule">
+      <UniqueIdentifier>{f028cd4c-5497-4925-879c-32de0560093d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\GameEngine">
+      <UniqueIdentifier>{041f4f69-3dae-4131-a2d9-cdb9937cc518}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Image">
+      <UniqueIdentifier>{16ad91e0-ff27-4be9-8108-7ef4e4dcc5da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Input">
+      <UniqueIdentifier>{5a6fcf2d-21d8-42ea-ba9c-791d87091dd4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MainEntry">
+      <UniqueIdentifier>{705d17d2-a236-42b2-97bc-71db9ad79365}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Window">
+      <UniqueIdentifier>{27a00c50-e3f8-4736-a6c6-fc34e15e34af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\TSingleton">
+      <UniqueIdentifier>{c639fd44-22d9-4d47-aee1-760f171c804d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MainEntry\TestScene">
+      <UniqueIdentifier>{95935e08-3c97-4876-ab8f-32c30706d9cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\GameEngine\GameObject">
+      <UniqueIdentifier>{c05ce4d8-6987-433e-86a9-390cb4051e55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\GameEngine\Scene">
+      <UniqueIdentifier>{94d18463-7040-46e2-86c1-f24e3f22dc35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\GameEngine\SceneManager">
+      <UniqueIdentifier>{e6ebc05a-072f-4dc4-a940-125798bf1451}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\GameEngine\MainPool">
+      <UniqueIdentifier>{33229e6e-2c3f-45bc-a1f6-a721eee42ce0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PrivateFolder">
+      <UniqueIdentifier>{4453491e-6f2f-453b-bae0-ac9852ff09c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PrivateFolder\민병">
+      <UniqueIdentifier>{478a4ffd-a8f2-478f-b081-b6f3d4c919e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PrivateFolder\동현">
+      <UniqueIdentifier>{242ce62d-e389-4d4c-97a0-9350e1d9d468}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PrivateFolder\순우">
+      <UniqueIdentifier>{7f38dbeb-825d-4c18-b4b0-c05e2c1da6e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PrivateFolder\한영">
+      <UniqueIdentifier>{58839e7d-026b-4aff-9dd3-7cdf2da90ffd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PrivateFolder\우현">
+      <UniqueIdentifier>{a62bcc41-7b08-4579-aa58-32ad799593fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PrivateFolder\석환">
+      <UniqueIdentifier>{1edb000c-b88d-4f65-baff-7f19876a8547}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Time">
+      <UniqueIdentifier>{eb5ec10d-df40-41cf-abea-922557e76ea9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="AutoChess.rc">
-      <Filter>리소스 파일</Filter>
+      <Filter>Resource</Filter>
     </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="small.ico">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="AutoChess.ico">
-      <Filter>리소스 파일</Filter>
-    </Image>
   </ItemGroup>
 </Project>

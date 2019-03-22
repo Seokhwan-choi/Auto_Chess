@@ -8,6 +8,7 @@
 ************************************************************************/
 class Transform final
 {
+	BlockAssign(Transform)
 private:
 	Vector2 mWorldPosition;
 	Vector2 mLocalPosition;
@@ -18,9 +19,6 @@ private:
 	Transform* mParent; 
 	Transform* mFirstChild;
 	Transform* mNextSibling;
-private:
-	Transform(const Transform& t) {}
-	Transform operator=(const Transform& t ) {}
 public:
 	Transform();
 	Transform(const Vector2& pos, const Vector2& size, const Pivot::Enum& pivot = Pivot::LeftTop);

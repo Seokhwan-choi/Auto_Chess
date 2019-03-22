@@ -28,7 +28,7 @@ float으로 static_cast
 #define BlockAssign(ClassName)\
 public:\
 ClassName(const ClassName& t) = delete;\
-ClassName operator=(const ClassName& t) = delete;
+const ClassName& operator=(const ClassName& t) = delete;
 /*********************************************************************************
 ## Synthesize ##
 @@ VarType : 자료형 

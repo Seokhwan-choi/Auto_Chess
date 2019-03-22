@@ -7,6 +7,8 @@
 *****************************************************************************/
 class Input final : public SingletonBase<Input> 
 {
+	BlockAssign(Input)
+private:
 	enum : int {KeyMax = 256};
 private:
 	//중복 키 허용을 위해 이전 키와 현재 키 변수 사용
@@ -14,7 +16,6 @@ private:
 	std::bitset<KeyMax> mKeyCurrent;
 	Vector2 mMousePosition;
 public:
-	BlockAssign(Input)
 	Input();
 	virtual ~Input();
 
